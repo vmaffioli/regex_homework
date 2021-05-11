@@ -1,5 +1,8 @@
 # REGEX
+-------------------------------------------------------------------------------
+
 <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">Quick Reference - Microsoft</a>
+-------------------------------------------------------------------------------
 
 REGEX - examples &amp;&amp; study material
 
@@ -14,6 +17,7 @@ Find all matches in the text, no matter whre they are
 Engine starts parsing data from left to right, sometimes backtranking when match is not found
 
 Matches are all case sensitive by default
+-------------------------------------------------------------------------------
 
 Range examples
 [A-Z]  matches any uppercase character from A to Z 
@@ -21,6 +25,7 @@ Range examples
 [0-9] matches any digit character from 0 to 9
 [A-Za-z0-9] we can also combine them
 
+-------------------------------------------------------------------------------
 
 Repetition Metacharacters
 Quantifier	Description
@@ -58,6 +63,35 @@ Greedy \w+\d+\w+ it maches file1_export from file1_export.sql  since it tries to
 Lazy \w+\d+\w+? , this matches file1_ from file1_export.sql  why is gives up when it find the first word character at the end. (Notice we have a question mark at the end of the w "?" )
 
 You can use the lazy format in these quantifiers  *, +. {} ?, you would have something likes this *?, +?, {}?, ??
+
+
+-------------------------------------------------------------------------------
+
+
+Grouping 
+Examples
+
+/(cde)+/ matches cde and cdecdecdecde
+
+/(super)?market/ matches market and supermarket
+
+(super)market matches supermarket
+
+-------------------------------------------------------------------------------
+
+Alternation
+examples
+
+super|market matches super or market
+
+super(market|bowl) matches supermarket or superbowl
+
+-------------------------------------------------------------------------------
+
+Repeating alternations
+\(12|ab|#%){8}\ this matches  12ab#%12ab#%12ab
+
+The code above might seen confusing but was happening is that the sets of characters are repeating until they reach eight times in sets of two. Notice we are wrapping the symbols in parenthesis, basically groping then and then applying the quantifier.
 
 
 to remember
