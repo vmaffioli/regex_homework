@@ -94,6 +94,39 @@ Repeating alternations
 The code above might seen confusing but was happening is that the sets of characters are repeating until they reach eight times in sets of two. Notice we are wrapping the symbols in parenthesis, basically groping then and then applying the quantifier.
 
 
+Anchors 
+Metacharacter	Description
+^	The match must start at the beginning of the string or line.
+$	The match must occur at the end of the string or before \n at the end of the line or string.
+\A	The match must occur at the start of the string.
+\Z	The match must occur at the end of the string or before \n at the end of the string.
+NOTE:  \A and \Z are supported by PHP, Python, Perl, Java and .NET . Maybe other engines will start supporting it the future.
+
+Remember this will only reference the position not the characters, meaning the are zero-width .
+
+NOTE: the ^ and $ support multiline mode, meaning they can match not just then end of string but the end of lines. With \A and \D you cannot do that.
+
+
+
+Examples 
+/^\./  this matches the first dot on  .car. 
+
+/\.$/  this matches the last dot on  .car. 
+
+-------------------------------------------------------------------------------
+
+Boundaries
+\b\w+\b matches my car is black, this will be default behavior without \b in this case, so every beginning and end of the word is matched.
+
+\B\w+\B matches a  from car and lack from black, so letters that are NOT the beginning or end of words are matched here.
+
+
+
+Fullscreen
+
+
+-------------------------------------------------------------------------------
+
 to remember
 - Standart - /expression/
 - Case-insensitive - /expression/i
