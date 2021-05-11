@@ -7,10 +7,10 @@ Expressions need to be surrounded by forward slash - Eg.
 /expression/
 
 ### Models
-Standart - /expression/
-Case-insensitive - /expression/i
-Dot-matches-all - /expression/s
-Multiline - /expression/m
-Global - /expression/g
-Match anything - .
-Escape = \
+- Standart - /expression/
+- Case-insensitive - /expression/i
+- Dot-matches-all - /expression/s
+- Multiline - /expression/m
+- Global - /expression/g
+- Match anything - .
+- Escape = \
