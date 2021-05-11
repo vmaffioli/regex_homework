@@ -127,6 +127,51 @@ Fullscreen
 
 -------------------------------------------------------------------------------
 
+
+Backreferences
+Grouped expressions that are capture for later usage
+
+Example
+
+super(market) matches supermarket and stores market. So if we wanted to use this store value we would use numbers from 1-9 for example \1 .
+
+ Example 
+
+super(market) \1 matches supermarket market
+
+super(market) \1 super(bowl) \2 matches 
+
+supermarket market superbowl bowl
+
+As you can see we are using the numbers from left to right in order to use the date stored int the parenthesis.
+
+NOTE: since capturing happens by default it will eat up the spaces 1-9 that we have, and can slow down our app, to turn this off we just use question mark followed by a colon in the parenthesis like so..
+
+super(?:market) 
+
+-------------------------------------------------------------------------------
+
+Positive Lookaheads
+super(?=market)  if super is preceded by market, match it, this will match super
+
+To do the apposite we do this .
+
+super(?!market) this will match super not supermarket super
+
+-------------------------------------------------------------------------------
+
+
+Positive Lookaheads
+(?<=super)market matches market in supermarket
+
+To do the apposite we do this .
+
+(?<!market)super matches super in supermarket
+
+NOTE this are NOT supported in the Javascript engine yet but PHP, JAVA, .NET and PYTHON supports it. Maybe well see more engines supporting this in the future.
+
+-------------------------------------------------------------------------------
+
 to remember
 - Standart - /expression/
 - Case-insensitive - /expression/i
