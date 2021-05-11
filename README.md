@@ -15,6 +15,12 @@ Engine starts parsing data from left to right, sometimes backtranking when match
 
 Matches are all case sensitive by default
 
+Range examples
+[A-Z]  matches any uppercase character from A to Z 
+[a-z] matches any lowercase character from A to Z 
+[0-9] matches any digit character from 0 to 9
+[A-Za-z0-9] we can also combine them
+
 ### Examples
 - Standart - /expression/
 - Case-insensitive - /expression/i
@@ -25,4 +31,6 @@ Matches are all case sensitive by default
 - Escape = \
 - New line = \n
 - Tab- \t
-- 
+- Range - []
+- Whiste space - \s 
+- Negation - ^
